@@ -1,7 +1,5 @@
-
-
-function formPrice (prijsOne, prijsTwo) {
-    return `€${prijsOne},- en €${prijsTwo},-`;
+function productPrice(price) {
+    return '€ ' + price + ',-';
 }
 
-export default formPrice
+export default productPrice;

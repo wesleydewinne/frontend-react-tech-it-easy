@@ -1,14 +1,21 @@
 
-function tvScreenSizeString(tv) {
+function tvScreenSizeString(sizesArray) {
+    let output = '';
 
-    let sizeString = '';
+    for (let i = 0; i < sizesArray.length; i++) {
+        const currentSizeInches = sizesArray[i];
+        const currentSizeCm = Math.round(sizesArray[i] * 2.54);
 
-    for (let i = 0; i < tv.availableSizes.length; i++) {
-        sizeString = sizeString + tv.availableSizes[i] + ' inch (' + (tv.availableSizes[i]*2.54).toFixed(0) + ' cm) | '
+        // Format de string
+        output = output + `${currentSizeInches} inch (${currentSizeCm} cm)`;
+
+        // Als we nog NIET bij de laatste size zijn, voeg dan een | toe aan het eind
+        if (i < sizesArray.length - 1) {
+            output = `${output} | `;
+        }
     }
 
-    sizeString = sizeString.slice(0, -3);
-
-    return sizeString;
+    return output;
 }
+
 export default tvScreenSizeString;

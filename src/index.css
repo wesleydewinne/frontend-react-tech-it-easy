@@ -12,3 +12,28 @@ body {
   font-family: 'Zen Kaku Gothic New', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap');
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+button + button {
+  margin-left: 6px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
